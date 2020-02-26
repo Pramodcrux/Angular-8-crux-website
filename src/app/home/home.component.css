@@ -1,0 +1,37 @@
+/*Section First*/
+.crux-home {
+    padding: 100px 0px;
+    color: #fff;
+    background-image: linear-gradient(
+      to right top,
+      #d16b8a,
+      #c0598d,
+      #ab4b92,
+      #8f4197,
+      #6a3b9c,
+      #5e41a2,
+      #4f46a8,
+      #3c4bad,
+      #555ab7,
+      #6a6ac1,
+      #7f7bcc,
+      #928cd6
+    );
+  }
+  .crux-home-right{
+      text-align: center;
+  }
+  .home-about{
+      padding: 50px 0px;
+      text-align: center;
+  }
+  .home-request-button{
+    text-transform: uppercase;
+  }
+  .crux-service-h2{
+      font-size:38px;
+      color: #10266b;
+      font-family: 'Roboto';
+  }
+  
+  
