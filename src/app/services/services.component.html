@@ -1,1 +1,45 @@
-<p>services works!</p>
+<div class="container">
+    <div class="crux-top-spacing">
+        <h1>Services</h1>
+        <div class="services">
+            <div class="row">
+                <div class="col-md-4">
+                    <mat-card>
+                        <mat-card-title>Graphic, Brochure and Logo Designing</mat-card-title>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        <mat-chip-list aria-label="Fish selection">
+                         <mat-chip color="primary" selected>Read More</mat-chip> 
+                        </mat-chip-list>
+                    </mat-card>
+                </div>
+                <div class="col-md-4">
+                    <mat-card>
+                        <mat-card-title>Graphic, Brochure and Logo Designing</mat-card-title>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                            industry. Lorem Ipsum has been the industry's standard dummy 
+                            text ever since the 1500s, when an unknown 
+                            printer took a galley of type and scrambled 
+                            it to make a type specimen book. </p>
+                            <mat-chip-list aria-label="Fish selection">
+                                <mat-chip color="primary" selected [routerLink]="['./FirstServiceComponent']">Read More</mat-chip>
+                            </mat-chip-list>
+                    </mat-card>
+                </div>
+                <div class="col-md-4">
+                    <mat-card>
+                        <mat-card-title>Graphic, Brochure and Logo Designing</mat-card-title>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                            industry. Lorem Ipsum has been the industry's 
+                            standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of 
+                            type and scrambled it to make a type specimen book. </p>
+                            <mat-chip-list aria-label="Fish selection">
+                                <mat-chip color="primary" selected>Read More</mat-chip>
+                            </mat-chip-list>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
