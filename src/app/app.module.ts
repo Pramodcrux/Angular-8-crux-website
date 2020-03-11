@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MatToolbarModule, MatButtonModule, MatIconModule,MatCardModule} from '@angular/material';
@@ -20,6 +19,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FirstServiceComponent } from './services/first-service/first-service.component';
 import { SecondServiceComponent } from './services/second-service/second-service.component';
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
+import { ItemListComponent } from './projects/item-list/item-list.component';
+import { ItemDetailsComponent } from './projects/item-details/item-details.component';
 
 
 @NgModule({
@@ -35,12 +36,13 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
     FirstServiceComponent,
     SecondServiceComponent,
     NotFoundComponentComponent,
+    ItemListComponent,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,

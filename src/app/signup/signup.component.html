@@ -4,57 +4,46 @@
             <h2>Login Form</h2>
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <div class="crux-form">
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width">
-                        <mat-label>Username</mat-label>
-                        <input matInput placeholder="Enter UserName">
-                        </mat-form-field>
-                        <mat-form-field class="example-full-width">
-                            <mat-label>Password</mat-label>
-                            <input matInput placeholder="Enter Password">
-                        </mat-form-field>
-                        <a mat-raised-button color="accent">Login</a>
-                    </form>
-            </div>
-        </div>
-        <div class="col-md-4"></div>
-    </div> -->
     <div class="row">
         <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <div class="crux-form">
-                <form action="#"  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                    <div class="form-group">
-                      <label for="email">First name</label>
-                      <input type="text" 
-                      class="form-control" 
-                      id="first name"
-                      formControlName="firstName"
-                      [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
-                      >
-                      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
-                    </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Last name</label>
-                      <input type="text"
-                       class="form-control" 
-                       id="last name"
-                       formControlName="lastName"
-                       [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
-                       <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-                       </div>
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                    <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
-                  </form>
-            </div>
+        <div class="col-md-4 crux-form">
+            <form #loginForm="ngForm" (ngSubmit)="submitForm(loginForm.value)">
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input 
+                    type="email"
+                    class="form-control" 
+                    placeholder="Enter email" 
+                    id="email"
+                    ngModel
+                    name="email"
+                    #email = "ngModel"
+                    required
+                    >
+                </div>
+                <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                    Email is required.
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input 
+                    type="password" 
+                    class="form-control" 
+                    placeholder="Enter password" 
+                    id="pwd"
+                    ngModel
+                    name="pwd"
+                    #pwd="ngModel"
+                    required>
+                  </div>
+                <div class="alert alert-danger" *ngIf="pwd.touched && !pwd.valid">
+                    Password is required.
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+                
+              </form>
         </div>
         <div class="col-md-4"></div>
     </div>
